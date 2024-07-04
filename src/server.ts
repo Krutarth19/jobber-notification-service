@@ -6,11 +6,10 @@ import { Logger } from 'winston';
 import { IEmailMessageDetails, winstonLogger } from '@Krutarth19/jobber-shared';
 import { Application } from 'express';
 import { Channel } from 'amqplib';
-
-import { healthRoute } from './routes';
-import { checkConnection } from './elasticsearch';
-import { createConnection } from './queues/connection';
-import { consumeAuthEmailMessage, consumeOrderEmailMessage } from './queues/email.consumer';
+import { healthRoute } from '@notifications/routes';
+import { checkConnection } from '@notifications/elasticsearch';
+import { createConnection } from '@notifications/queues/connection';
+import { consumeAuthEmailMessage, consumeOrderEmailMessage } from '@notifications/queues/email.consumer';
 
 const SERVER_PORT = 4001;
 

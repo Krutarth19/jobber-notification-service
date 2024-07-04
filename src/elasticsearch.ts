@@ -2,8 +2,7 @@ import { Client } from '@elastic/elasticsearch';
 import { Logger } from 'winston';
 import { winstonLogger } from '@Krutarth19/jobber-shared';
 import { ClusterHealthResponse } from '@elastic/elasticsearch/lib/api/types';
-
-import { config } from './config';
+import { config } from '@notifications/config';
 
 const log: Logger = winstonLogger(`${config.ELASTIC_SEARCH_URL}`, 'notificationServer', 'debug');
 

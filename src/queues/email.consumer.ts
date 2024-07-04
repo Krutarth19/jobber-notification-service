@@ -2,9 +2,8 @@ import { Channel, ConsumeMessage } from 'amqplib';
 import { Logger } from 'winston';
 import { IEmailLocals, winstonLogger } from '@Krutarth19/jobber-shared';
 import { config } from '@notifications/config';
-
-import { createConnection } from './connection';
-import { sendEmail } from './mail.transport';
+import { createConnection } from '@notifications/queues/connection';
+import { sendEmail } from '@notifications/queues/mail.transport';
 
 const log: Logger = winstonLogger(`${config.ELASTIC_SEARCH_URL}`, 'emailConsumer', 'debug');
 
