@@ -14,6 +14,7 @@ async function createConnection(): Promise<Channel | undefined> {
     return channel;
   } catch (error) {
     log.log('error', 'NotificationService createConnection() method:', error);
+    return undefined;
   }
 }
 
